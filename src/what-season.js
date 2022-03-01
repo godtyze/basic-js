@@ -24,8 +24,7 @@ function getSeason(date) {
 
   if (!date) return 'Unable to determine the time of year!';
 
-  let validatedDate = validate(date);
-  if (!Date.parse(date) || !validatedDate) throw new Error('Invalid date!');
+  validate(date);
 
   if (date.getMonth() === 11 || date.getMonth() === 0 || date.getMonth() === 1) {
     season = 'winter';
